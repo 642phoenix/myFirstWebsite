@@ -1,4 +1,4 @@
-console.log("connected too js")
+console.log("connected script.js")
 if (window.jQuery) { console.log("jquery connected") } 
 
 
