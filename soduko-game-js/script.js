@@ -17,16 +17,71 @@ if (window.jQuery) { console.log("jquery connected") }
 
 var activeCell = "" ;
 var activeDigit = 0 ;
+var numbersPlaced = [
+  {
+    "equal":9,
+    "times":4
+  },
+  {
+    "equal":8,
+    "times":4
+  },
+  {
+    "equal":7,
+    "times":4
+  },
+  {
+    "equal":6,
+    "times":2
+  },
+  {
+    "equal":5,
+    "times":3
+  },
+  {
+    "equal":4,
+    "times":4
+  },
+  {
+    "equal":3,
+    "times":4
+  },
+  {
+    "equal":2,
+    "times":1
+  },
+  {
+    "equal":1,
+    "times":5
+  }
+]
+// var nine = 4;
+// var eight = 4;
+// var seven = 4;
+// var six = 2;
+// var five = 3;
+// var four = 4;
+// var three = 4;
+// var two = 1;
+// var one = 5;
 //this function behaves two different ways depending on user input...
 //[ "this function invokes placedigit to place the active digit in the cell" ]
 //["if there is NO active digit selected by the user it adds the highlight class "]
 function activateCell(e){
   let id = e.target.id ;
   if(activeDigit !== 0){
+    for (const key in numbersPlaced) {
+      if( numbersPlaced[key].equal === activeDigit ){
+        numbersPlaced[key].times++;
+      }
+
+    }
     placeDigit(id, activeDigit)
     return
   }
-  $(`#${id}`).toggleClass("highlight")
+  // $(`#${id}`).toggleClass("highlight")
+  window.alert("First select a number to input.")
+  return
 
   
 }

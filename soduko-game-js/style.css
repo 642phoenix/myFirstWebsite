@@ -55,14 +55,12 @@ body{
   background-color: rgb(249, 249, 203);
 }
 .cell.highlight{
-  background-color: burlywood;
+  background-color: rgb(213, 120, 74);
 }
 
-.cell.flashing{
-  /* animation: ; */
-}
 
-keygen4
+
+
 
 .cell.done{
   background-color: rgb(216, 216, 183);
