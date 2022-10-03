@@ -1,0 +1,90 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgba(0, 0, 0, 0.347);
+}
+
+#sodukoContainer{
+  margin: 50px auto;
+  width: 480px;
+  height: 480px;
+  background-color: rgb(4, 4, 106);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.section{
+  height: 33%;
+  width: 33%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border: 2px solid black;
+}
+
+#numbersContainer{
+  margin: 10px auto;
+  width: 450px;
+  height: 75px;
+  background-color: rgb(4, 4, 106);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.cell{
+  height: 50px;
+  width: 49px;
+  border: .5px solid rgba(0, 0, 0, 0.301);
+  background-color: beige;
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cell:hover{
+  background-color: rgb(249, 249, 203);
+}
+.cell.highlight{
+  background-color: burlywood;
+}
+
+.cell.flashing{
+  /* animation: ; */
+}
+
+keygen4
+
+.cell.done{
+  background-color: rgb(216, 216, 183);
+}
+
+.numKeys{
+  height: 70px;
+  width: 49px;
+  border: 1px solid black;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.numKeys:hover, .numKeys.active{
+  background-color: rgb(207, 207, 127);
+}
+
+.active{
+  background-color: rgb(144, 6, 6);
+}

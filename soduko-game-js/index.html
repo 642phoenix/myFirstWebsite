@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="./jquery.min.js" ></script>
+  <title>Soduko Test</title>
+</head>
+<body>
+
+   <div id="sodukoContainer">
+
+    <div id="A1" class="section">
+      <div id="A1a1" onclick="activateCell(event)" class="cell"></div>
+      <div id="A1a2" onclick="activateCell(event)" class="cell"></div>
+      <div id="A1a3" onclick="activateCell(event)" class="cell"></div>
+      <div id="A1b1" onclick="activateCell(event)" class="cell"></div>
+      <div id="A1b2" class="cell done">1</div>
+      <div id="A1b3" class="cell done">9</div>
+      <div id="A1c1" onclick="activateCell(event)" class="cell"></div>
+      <div id="A1c2" class="cell done">4</div>
+      <div id="A1c3" class="cell done">3</div>
+    </div>
+
+    <div id="A2" class="section">
+      <div id="A2a1" class="cell done">8</div>
+      <div id="A2a2" onclick="activateCell(event)" class="cell"></div>
+      <div id="A2a3" onclick="activateCell(event)" class="cell"></div>
+      <div id="A2b1" onclick="activateCell(event)" class="cell"></div>
+      <div id="A2b2" onclick="activateCell(event)" class="cell"></div>
+      <div id="A2b3" class="cell done">5</div>
+      <div id="A2c1" onclick="activateCell(event)" class="cell"></div>
+      <div id="A2c2" class="cell done">1</div>
+      <div id="A2c3" onclick="activateCell(event)" class="cell"></div>
+    </div>
+
+    <div id="A3" class="section">
+      <div id="A3a1" onclick="activateCell(event)" class="cell"></div>
+      <div id="A3a2" onclick="activateCell(event)" class="cell"></div>
+      <div id="A3a3" class="cell done">9</div>
+      <div id="A3b1" class="cell done">8</div>
+      <div id="A3b2" class="cell done">3</div>
+      <div id="A3b3" onclick="activateCell(event)" class="cell"></div>
+      <div id="A3c1" onclick="activateCell(event)" class="cell"></div>
+      <div id="A3c2" onclick="activateCell(event)" class="cell"></div>
+      <div id="A3c3" class="cell done">7</div>
+    </div>
+
+    <div id="B1" class="section">
+      <div id="B1a1" class="cell done">4</div>
+      <div id="B1a2" onclick="activateCell(event)" class="cell"></div>
+      <div id="B1a3" onclick="activateCell(event)" class="cell"></div>
+      <div id="B1b1" onclick="activateCell(event)" class="cell"></div>
+      <div id="B1b2" onclick="activateCell(event)" class="cell"></div>
+      <div id="B1b3" class="cell done">2</div>
+      <div id="B1c1" onclick="activateCell(event)" class="cell"></div>
+      <div id="B1c2" class="cell done">8</div>
+      <div id="B1c3" onclick="activateCell(event)" class="cell"></div>
+    </div>
+
+    <div id="B2" class="section">
+      <div id="B2a1" class="cell done">1</div>
+      <div id="B2a2" class="cell done">5</div>
+      <div id="B2a3" onclick="activateCell(event)" class="cell"></div>
+      <div id="B2b1" class="cell done">7</div>
+      <div id="B2b2" onclick="activateCell(event)" class="cell"></div>
+      <div id="B2b3" class="cell done">4</div>
+      <div id="B2c1" onclick="activateCell(event)" class="cell"></div>
+      <div id="B2c2" class="cell done">9</div>
+      <div id="B2c3" onclick="activateCell(event)" class="cell"></div>
+    </div>
+
+    <div id="B3" class="section">
+      <div id="B3a1" onclick="activateCell(event)" class="cell"></div>
+      <div id="B3a2" onclick="activateCell(event)" class="cell"></div>
+      <div id="B3a3" class="cell done">3</div>
+      <div id="B3b1" onclick="activateCell(event)" class="cell"></div>
+      <div id="B3b2" class="cell done">1</div>
+      <div id="B3b3" onclick="activateCell(event)" class="cell"></div>
+      <div id="B3c1" class="cell done">6</div>
+      <div id="B3c2" onclick="activateCell(event)" class="cell"></div>
+      <div id="B3c3" onclick="activateCell(event)" class="cell"></div>
+    </div>
+
+    <div id="C1" class="section">
+      <div id="C1a1" onclick="activateCell(event)" class="cell"></div>
+      <div id="C1a2" class="cell done">7</div>
+      <div id="C1a3" onclick="activateCell(event)" class="cell"></div>
+      <div id="C1b1" onclick="activateCell(event)" class="cell"></div>
+      <div id="C1b2" class="cell done">3</div>
+      <div id="C1b3" onclick="activateCell(event)" class="cell"></div>
+      <div id="C1c1" class="cell done">9</div>
+      <div id="C1c2" onclick="activateCell(event)" class="cell"></div>
+      <div id="C1c3" class="cell done">4</div>
+    </div>
+
+    <div id="C2" class="section">
+      <div id="C2a1" onclick="activateCell(event)" class="cell"></div>
+      <div id="C2a2" onclick="activateCell(event)" class="cell"></div>
+      <div id="C2a3" class="cell done">6</div>
+      <div id="C2b1" onclick="activateCell(event)" class="cell"></div>
+      <div id="C2b2" class="cell done">7</div>
+      <div id="C2b3" onclick="activateCell(event)" class="cell"></div>
+      <div id="C2c1" class="cell done">5</div>
+      <div id="C2c2" onclick="activateCell(event)" class="cell"></div>
+      <div id="C2c3" onclick="activateCell(event)" class="cell"></div>
+    </div>
+
+    <div id="C3" class="section">
+      <div id="C3a1" class="cell done">3</div>
+      <div id="C3a2" onclick="activateCell(event)" class="cell"></div>
+      <div id="C3a3" onclick="activateCell(event)" class="cell"></div>
+      <div id="C3b1" onclick="activateCell(event)" class="cell"></div>
+      <div id="C3b2" class="cell done">8</div>
+      <div id="C3b3" onclick="activateCell(event)" class="cell"></div>
+      <div id="C3c1" onclick="activateCell(event)" class="cell"></div>
+      <div id="C3c2" onclick="activateCell(event)" class="cell"></div>
+      <div id="C3c3" class="cell done">1</div>
+    </div>
+
+  </div>
+
+  <div id="numbersContainer">
+    <div id="num1" class="numKeys" onclick="activeNumber(event)">1</div>
+    <div id="num2" class="numKeys" onclick="activeNumber(event)">2</div>
+    <div id="num3" class="numKeys" onclick="activeNumber(event)">3</div>
+    <div id="num4" class="numKeys" onclick="activeNumber(event)">4</div>
+    <div id="num5" class="numKeys" onclick="activeNumber(event)">5</div>
+    <div id="num6" class="numKeys" onclick="activeNumber(event)">6</div>
+    <div id="num7" class="numKeys" onclick="activeNumber(event)">7</div>
+    <div id="num8" class="numKeys" onclick="activeNumber(event)">8</div>
+    <div id="num9" class="numKeys" onclick="activeNumber(event)">9</div>
+  </div>
+ 
+ 
+  <!-- <img id="catClimber" alt="test"/> -->
+ <!-- <img src="./images/cat_photo.jpg" /> -->
+  
+</body>
+
+</html>
