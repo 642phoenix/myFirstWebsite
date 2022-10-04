@@ -88,7 +88,7 @@ function checkTimes(obj){
   if ( times === 9 ){
     $(`#${id}`).toggleClass('numKeys')
     $(`#${id}`).toggleClass('disabledKeys')
-    $(`#${id}`).off('click')
+    document.getElementById(id).onclick = ""
     resetDigit()
   }
   // return times === 9 ? resetDigit() : null ;
@@ -102,7 +102,9 @@ function checkTimes(obj){
 function removeActive(){
   let old = document.getElementsByClassName("active")[0] || false ;
   if(old){
-    old.classList = "numKeys";
+    let id = old.id ;
+    $(`#${id}`).toggleClass('active')
+    // old.classList = "numKeys";
   }
 }
 
@@ -124,13 +126,22 @@ function activeNumber(e){
   let num = Number(e.target.textContent) ;
   activeDigit = num ;
   let id = e.target.id ;
-  $(`#${id}`).toggleClass("active")[0 ]
+  for ( const key in numbersPlaced ) {
+    if( numbersPlaced[key].equal === num ){
+      if( numbersPlaced[key].times === 9 ){
+        console.log("here")
+        resetDigit()
+        return
+      }
+    }
+  }
+  $(`#${id}`).toggleClass("active")[0]
 
 }
 
 function activateEraser(id){
-  document.getElementById(id).style.color = "red"
-  document.getElementById(id).className += " flashing"
+  // document.getElementById(id).style.color = "red"
+  // document.getElementById(id).className += " flashing"
 }
 
 function checkSection(donde, digit){
@@ -143,7 +154,7 @@ function checkSection(donde, digit){
       compareArray.push(num)
     }
   }
-  console.log(compareArray, digit)
+  // console.log(compareArray, digit)
   let check = compareArray.every((x)=> x != digit)
   // console.log(compareArray.findIndex(x=>x==digit))
   if(check) return 

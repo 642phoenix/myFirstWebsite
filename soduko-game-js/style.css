@@ -96,7 +96,3 @@ body{
   cursor: pointer;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.active{
-  background-color: rgb(144, 6, 6);
-}
