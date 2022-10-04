@@ -83,6 +83,20 @@ body{
   background-color: rgb(207, 207, 127);
 }
 
+.disabledKeys{
+  height: 70px;
+  width: 49px;
+  border: 1px solid black;
+  background-color: rgb(103, 103, 92);
+  display: flex;
+  justify-content: center;
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .active{
   background-color: rgb(144, 6, 6);
 }

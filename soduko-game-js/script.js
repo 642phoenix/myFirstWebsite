@@ -55,36 +55,46 @@ var numbersPlaced = [
     "times":5
   }
 ]
-// var nine = 4;
-// var eight = 4;
-// var seven = 4;
-// var six = 2;
-// var five = 3;
-// var four = 4;
-// var three = 4;
-// var two = 1;
-// var one = 5;
+
 //this function behaves two different ways depending on user input...
 //[ "this function invokes placedigit to place the active digit in the cell" ]
-//["if there is NO active digit selected by the user it adds the highlight class "]
+//["if there is NO active digit selected by the user it returns"]
 function activateCell(e){
   let id = e.target.id ;
   if(activeDigit !== 0){
     for (const key in numbersPlaced) {
       if( numbersPlaced[key].equal === activeDigit ){
+        placeDigit(id, activeDigit)
         numbersPlaced[key].times++;
+        checkTimes(numbersPlaced[key])
       }
 
     }
-    placeDigit(id, activeDigit)
     return
   }
-  // $(`#${id}`).toggleClass("highlight")
+
   window.alert("First select a number to input.")
   return
-
   
 }
+
+
+// remember to check for change of a number if one was erased or replaced
+function checkTimes(obj){
+  let times = obj.times ;
+  let equals = obj.equal ;
+  let id = "num" + `${equals}` ;
+
+  if ( times === 9 ){
+    $(`#${id}`).toggleClass('numKeys')
+    $(`#${id}`).toggleClass('disabledKeys')
+    $(`#${id}`).off('click')
+    resetDigit()
+  }
+  // return times === 9 ? resetDigit() : null ;
+}
+
+
 
 
 // this function removes the active class so that the user number keys
@@ -101,6 +111,7 @@ function placeDigit(donde, digit){
   let elem = document.getElementById(donde) ;
   checkSection(donde, digit)
   elem.textContent = String(digit)
+  console.log(activeDigit)
 }
 
 const resetDigit = () => activeDigit = 0 ;
